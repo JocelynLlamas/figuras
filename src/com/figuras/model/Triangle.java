@@ -9,11 +9,15 @@ public class Triangle {
         this.height = height;
     }
 
+    //METODO
     public double getArea() {
-        return 0;
+        double A3;
+        A3 = (base*height)/2;
+        return A3;
     }
 
+    //IMPRIME NOMBRE
     public void draw() {
-        System.out.println("Circulo");
+        System.out.println("Triángulo");
     }
 }

@@ -9,20 +9,32 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Circle circle1 = new Circle(5), circle2 = new Circle(7);
+        //CREA LAS FIGURAS 
+        Circle circle1 = new Circle(5);
+        Circle circle2 = new Circle(7);
         Rectangle rectangle = new Rectangle(10, 20);
-        Square squares[] = new Square[5];
         Triangle triangle = new Triangle(10, 20);
 
-
+        //ARREGLO DE 5 CUADRADOS
+        Square squares[] = new Square[5];
+        //INSTANCIAS DE SQUARE
+        squares[0] = new Square(8);
+        squares[1] = new Square(2);
+        squares[2] = new Square(10);
+        squares[3] = new Square(25);
+        squares[4] = new Square(3);
+    
+        //LLAMA A LOS METODOS
         printFigure(circle1);
         printFigure(rectangle);
+        printFigure(triangle);
+    
+        //ITERACION SOBRE EL ARREGLO DE SQUARES (ES PLURAL PORQUE ES UN ARREGLO)
         for (Square square : squares) {
             printFigure(square);
         }
-        printFigure(triangle);
-
     }
+
 
     public static void printFigure(Circle circle) {
         circle.draw();
